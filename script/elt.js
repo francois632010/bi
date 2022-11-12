@@ -2,7 +2,8 @@
     let sayHey = () => {
         alert("hey hey !!!");
     }
-
+// pour plus tard: on peut avoir plusieur modèle --> this.pageTruc this.pageSommaire etc
+// on change le nom de zone(rank) par modele(rank, typeDePage)
     function Zone (rank) {
         this.zn = [
             {
@@ -19,16 +20,99 @@
                                         alt: "logo CAF"
                                     }
                                 ]
+                            },
+                            {
+                                elt: "div",
+                                sub: [
+                                    {
+                                        elt: "div",
+                                        inner: "Dates :"
+                                    },
+                                    {
+                                        elt: "div"
+                                    },
+                                    {
+                                        elt: "div",
+                                        inner: "Technicien :"
+                                    },
+                                    {
+                                        elt: "div"
+                                    }
+                                ]
+                            },
+                            {
+                                elt: "div",
+                                sub: [
+                                    {
+                                        elt: "h1",
+                                        inner: "Check-list entretien<br>appareils de voies<br>Equipés en ACIER"
+                                    }
+                                ]
+                            },
+                            {
+                                elt: "div",
+                                inner: "REGIOLIS ne passe pas"
+                            },
+                            {
+                                elt: "div",
+                                inner: "Main Gauche = MG<br>Main Droite = MD"
+                            },
+                            {
+                                elt: "div",
+                                sub: [
+                                    {
+                                        elt: "div",
+                                        inner: "Numéro d'appareil"
+                                    },
+                                    {
+                                        elt: "div",
+                                        inner: "C1"
+                                    }
+                                ]
+                            },
+                            {
+                                elt: "div",
+                                inner: "Cocher les constatations et / ou les opérations réalisées.<br>Les parties gauches et droites étant définies sur la photo."
+                            },
+                            {
+                                elt: "div",
+                                inner: "Suivre les recomendations de la Fiche technique :<br>EPB3000 - 02S - CONTROLE DES APPAREILS DE VOIE"
+                            },
+                            {
+                                elt: "img",
+                                atts: [
+                                    {
+                                        src: "./image/c1.gif",
+                                        alt: "appareil C1"
+                                    }
+                                ]
                             }
                         ]
                     }
                 ]
             }
         ]
+        // problème avec les elt présents dans les elts en ligne
+        // il faut un subLigne est donc inner doit être un tableau d'objet 
+        // avec textNode pour inner normal et "br" pour l'elt br par exemple
         this.makeClasses = () =>{
-            this.zn[0].classes = ['bloc-page', `bloc-page${rank}`];
+            this.zn[0].classes = ['bloc-page',`bloc-page${rank}`];
             this.zn[0].sub[0].classes = ["bloc-page__int"];
             this.zn[0].sub[0].sub[0].classes = ["logo-caf"];
+            this.zn[0].sub[0].sub[1].classes = ["QQ"];
+            this.zn[0].sub[0].sub[1].sub[0].classes = ["date__txt","QQ__txt"];
+            this.zn[0].sub[0].sub[1].sub[1].classes = ["date__field","QQ__field"];
+            this.zn[0].sub[0].sub[1].sub[2].classes = ["name__txt","QQ__txt"];
+            this.zn[0].sub[0].sub[1].sub[3].classes = ["name__field","QQ__field"];
+            this.zn[0].sub[0].sub[2].classes = ["border-ext", "border-ext--h1"];
+            this.zn[0].sub[0].sub[3].classes = ["note","note1"];
+            this.zn[0].sub[0].sub[4].classes = ["note","note2"];
+            this.zn[0].sub[0].sub[5].classes = ["item"];
+            this.zn[0].sub[0].sub[5].sub[0].classes = ["item__note"];
+            this.zn[0].sub[0].sub[5].sub[1].classes = ["item__number"];
+            this.zn[0].sub[0].sub[6].classes = ["note","note3"];
+            this.zn[0].sub[0].sub[7].classes = ["note","note4"];
+            this.zn[0].sub[0].sub[8].classes = ["img-c1"];
         }
     }
 
@@ -59,9 +143,7 @@
               newElt = buildElt(elt.elt, id, classes, inner, contentEditable, atts);
               father.appendChild(newElt);
               
-              if (elt.sub) downOnZone(elt.sub, newElt);
-              
-              
+              if (elt.sub) downOnZone(elt.sub, newElt);  
           }
       }
     
