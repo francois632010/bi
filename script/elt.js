@@ -86,6 +86,63 @@
                                         alt: "appareil C1"
                                     }
                                 ]
+                            },
+                            {
+                                elt: "div",
+                                sub: [
+                                    {
+                                        elt: "h5",
+                                        inner: "Consignes de sécurité"
+                                    },
+                                    {
+                                        elt: "div",
+                                        inner: "Demande accord d'accés à la voie d'essais<br>Port OBLIGATOIRE des équipements de sécurité <span class='note5--faible'>(Gants, lunettes, casque, GILET OU VESTE FLUORESCENTE)</span><br>Balisage de la zone de travail avec drapeaux et panneaux à 50m de la zone"
+                                    }
+                                ]
+                            },
+                            {
+                                elt: "div",
+                                sub: [
+                                    {
+                                        elt: "h3",
+                                        inner: "En cas de fissures :"
+                                    },
+                                    {
+                                        elt: "div",
+                                        inner: "STOPPER IMMEDIATEMENT, condamner la circulation ferroviaire et informer le Responsable MAINTENANCE"
+                                    }
+                                ]
+                            },
+                            {
+                                elt: "div",
+                                inner: "Remarque(s) :"
+                            },
+                            {
+                                elt: "div",
+                                inner: "Signature :"
+                            },
+                            {
+                                elt: "div",
+                                sub: [
+                                    {
+                                        elt: "main",
+                                        sub: [
+                                            {
+                                                elt: "div",
+                                                inner: "Coeur"
+
+                                            },
+                                            {
+                                                elt: "div",
+                                                inner: "Contre-rail gauche"
+                                            },
+                                            {
+                                                elt: "div",
+                                                inner: "Contre-rail droit"
+                                            }
+                                        ]
+                                    }
+                                ]
                             }
                         ]
                     }
@@ -113,6 +170,14 @@
             this.zn[0].sub[0].sub[6].classes = ["note","note3"];
             this.zn[0].sub[0].sub[7].classes = ["note","note4"];
             this.zn[0].sub[0].sub[8].classes = ["img-c1"];
+            this.zn[0].sub[0].sub[9].classes = ["note", "note5"];
+            this.zn[0].sub[0].sub[10].classes = ["note", "note6"];
+            this.zn[0].sub[0].sub[11].classes = ["note", "note7"];
+            this.zn[0].sub[0].sub[12].classes = ["note", "note8"];
+            this.zn[0].sub[0].sub[13].classes = ["border-ext","border-ext--main"];
+            this.zn[0].sub[0].sub[13].sub[0].sub[0].classes = ["main__coeur"];
+            this.zn[0].sub[0].sub[13].sub[0].sub[1].classes = ["main__gauche"];
+            this.zn[0].sub[0].sub[13].sub[0].sub[2].classes = ["main__droit"];
         }
     }
 
