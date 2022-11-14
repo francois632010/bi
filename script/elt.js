@@ -8,6 +8,7 @@
         this.zn = [
             {
                 elt: "div",
+                pageBreakAfter: true,
                 sub: [
                     {
                         elt: "div",
@@ -181,13 +182,14 @@
         }
     }
 
-    let buildElt = (what, ID, classes = [], inner = "", contentEditable = false, atts = null) => {
+    let buildElt = (what, ID, classes = [], inner = "", contentEditable = false, atts = null, pageBreakAfter = false) => {
         let newElt = document.createElement(what);
         if (ID != "") newElt.setAttribute('id', ID);
         if (classes) for (let elt of classes) newElt.classList.add(elt);
         if (inner != "") newElt.innerHTML = inner;
         if (contentEditable) newElt.contentEditable = true;
         if (atts != null) for (let att of atts) for (let prop in att) newElt[prop] = att[prop];
+        if (pageBreakAfter == true) newElt.setAttribute('page-break-after', true);
     
         return newElt;
       }
@@ -198,14 +200,16 @@
                let inner = "";
                let newElt = null;
                let atts = null;
+               let pageBreakAfter = false;
           let contentEditable = false;
               if (elt.id) id = elt.id;
               if (elt.classes) classes = [...elt.classes];
               if (elt.inner) inner = elt.inner;
               if (elt.atts) atts = [...elt.atts];
+              if (elt.pageBreakAfter) pageBreakAfter = true;
           if (elt.contentEditable) contentEditable = elt.contentEditable;
               
-              newElt = buildElt(elt.elt, id, classes, inner, contentEditable, atts);
+              newElt = buildElt(elt.elt, id, classes, inner, contentEditable, atts, pageBreakAfter);
               father.appendChild(newElt);
               
               if (elt.sub) downOnZone(elt.sub, newElt);  
