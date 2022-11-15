@@ -1,0 +1,2 @@
+https://fgribreau.com/articles/voyage-au-coeur-de-javascript.html
+http://blog.haeresis.fr/classes-heritage-encapsulation-vs-prototype-en-js/

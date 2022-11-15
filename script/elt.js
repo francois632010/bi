@@ -67,7 +67,7 @@
                                     },
                                     {
                                         elt: "div",
-                                        inner: "C1"
+                                        inner: `C${rank}`
                                     }
                                 ]
                             },
