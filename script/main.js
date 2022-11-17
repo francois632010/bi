@@ -1,4 +1,4 @@
-elt.addAZone();
-data.getAPage(0) = "hey hey !!!";
-console.log(data.getAPage(0));
-console.log(data.getDoc())
+elt.addAZone(false, 1);
+elt.addAZone(false, 2);
+//elt.addAZone(false, 2);
+//elt.addAZone(false, 3);

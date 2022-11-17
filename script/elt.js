@@ -2,6 +2,18 @@
     let sayHey = () => {
         alert("hey hey !!!");
     }
+    const data = [
+        {},
+        
+        {
+            note1: {hidden: "hidden"}
+        },
+        
+        {
+            note1: {hidden: "visible"}
+        }
+    ]
+        
 // pour plus tard: on peut avoir plusieur modèle --> this.pageTruc this.pageSommaire etc
 // on change le nom de zone(rank) par modele(rank, typeDePage)
     function Zone (rank) {
@@ -83,7 +95,7 @@
                                 elt: "img",
                                 atts: [
                                     {
-                                        src: "./image/c1.gif",
+                                        src: `./image/c${rank}.gif`,
                                         alt: "appareil C1"
                                     }
                                 ]
@@ -163,14 +175,14 @@
             this.zn[0].sub[0].sub[1].sub[2].classes = ["name__txt","QQ__txt"];
             this.zn[0].sub[0].sub[1].sub[3].classes = ["name__field","QQ__field"];
             this.zn[0].sub[0].sub[2].classes = ["border-ext", "border-ext--h1"];
-            this.zn[0].sub[0].sub[3].classes = ["note","note1"];
+            this.zn[0].sub[0].sub[3].classes = ["note","note1", data[rank].note1.hidden];
             this.zn[0].sub[0].sub[4].classes = ["note","note2"];
             this.zn[0].sub[0].sub[5].classes = ["item"];
             this.zn[0].sub[0].sub[5].sub[0].classes = ["item__note"];
             this.zn[0].sub[0].sub[5].sub[1].classes = ["item__number"];
             this.zn[0].sub[0].sub[6].classes = ["note","note3"];
             this.zn[0].sub[0].sub[7].classes = ["note","note4"];
-            this.zn[0].sub[0].sub[8].classes = ["img-c1"];
+            this.zn[0].sub[0].sub[8].classes = ["img-c", `img-c${rank}`];
             this.zn[0].sub[0].sub[9].classes = ["note", "note5"];
             this.zn[0].sub[0].sub[10].classes = ["note", "note6"];
             this.zn[0].sub[0].sub[11].classes = ["note", "note7"];
