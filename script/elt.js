@@ -213,7 +213,7 @@
                let newElt = null;
                let atts = null;
                let pageBreakAfter = false;
-          let contentEditable = false;
+            let contentEditable = false;
               if (elt.id) id = elt.id;
               if (elt.classes) classes = [...elt.classes];
               if (elt.inner) inner = elt.inner;
