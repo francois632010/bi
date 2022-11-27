@@ -142,7 +142,35 @@
                                         sub: [
                                             {
                                                 elt: "div",
-                                                inner: "Coeur"
+                                                sub: [
+                                                    {
+                                                        elt: "h4",
+                                                        inner: "COEUR D'AIGUILLAGE"
+                                                    },
+                                                    {
+                                                        elt: "div",
+                                                        inner: "Aspect de bavures tranchantes sur le cœur de rail"
+                                                    },
+                                                    {
+                                                        elt: "div",
+                                                        //oui et non
+                                                        sub: [
+                                                            {
+                                                                elt: "div",
+                                                                //non
+                                                                sub: [
+                                                                    { elt: "div",inner: "Non" },
+                                                                    { elt: "div", inner:"X" },
+                                                                    { elt: "div", inner: "Oui" },
+                                                                    { elt: "div", inner:"X" },
+                                                                    { elt: "div", inner: "Polissage"},
+                                                                    { elt: "div", inner:"X" },
+                                                                    { elt: "div", inner: "Nettoyage des fonds de coeur d'aiguillage"}
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
 
                                             },
                                             {
